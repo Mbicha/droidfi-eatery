@@ -1,0 +1,20 @@
+{% extends "meals/base.html" %}
+{% block title %}DroidFi Eatery{% endblock %}
+
+{% block main %}
+    {% for dish in dishes %}
+    <div class="meal-box">
+        <div class="meal-image">
+            <img src="{{ MEDIA_URL }}{{ photo }}"/>            
+        </div>
+        <div class="meal-details">
+            <span class="meal-combination">
+               <strong>Meal: </strong>{{dish.combination}} 
+            </span><br>
+            <span class="meal-price">
+               <storng>Amount: </storng> Ksh. {{dish.amount}}
+            </span>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

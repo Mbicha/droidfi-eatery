@@ -1,0 +1,26 @@
+{% extends "meals/base.html" %}
+{% block title %}DroidFi Eatery{% endblock %}
+
+{% block main %}
+    <div class="menu-container">
+        <h2 class="menu-header">
+            DroidFi Eatery Menu
+        </h2>
+        <div class="new-meal-menu">
+            <a href="{% url 'new_meal' %}">Add Meal</a><br>
+        </div>
+        
+        {% for menu in mainMenu %}
+        <div class="menu-content">
+            <p class="details">
+                <span class="meal-combination">
+                    <strong>Meal:</strong> {{menu.combination}} 
+                </span>
+                <span class="meal-price">
+                    <strong>Amount:</strong> Ksh.{{menu.amount}}
+                </span>                
+            </p>
+            <input type="submit" value="Place Order" class="place-order">
+        </div><br>
+        {% endfor %}    
+{% endblock %}

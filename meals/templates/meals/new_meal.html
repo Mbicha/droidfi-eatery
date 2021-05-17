@@ -1,0 +1,14 @@
+{% extends "meals/base.html" %}
+{% load widget_tweaks %}
+{% block title %}DroidFi Eatery{% endblock %}
+
+{% block main %}
+    <form enctype="multipart/form-data" method="POST" action="">
+        {% csrf_token %}
+        {{ form.combination|add_class:"field-form field-form1" }}
+        {{ form.amount|add_class:"field-form field-form2" }}
+        {{ form.image|add_class:"field-form field-form3" }}
+        
+        <input type="submit" value="Upload"/>
+    </form>
+{% endblock %}

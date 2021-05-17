@@ -1,0 +1,14 @@
+{% extends "meals/base.html" %}
+{% block title %}DroidFi Eatery{% endblock %}
+
+{% block main %}
+    <div class="conteiner-center">
+        <div class="welcome">
+            Welcome to DroidFi Eatery. We offer highly nutrious meals.
+        </div>
+    
+        <div class="explore">
+            <a href="{% url 'dishes' %}">See Our Main Dishes</a>
+        </div>
+    </div>
+{% endblock %}
